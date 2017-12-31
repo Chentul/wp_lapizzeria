@@ -10,3 +10,9 @@
 * Tags: restaurant, mobile first, responsive, pizza
 * Text Domain: lapizzeria
 */
+body {
+	background: #000;
+}
+h1, p, blockquote p	{
+	color: #fff;
+}
