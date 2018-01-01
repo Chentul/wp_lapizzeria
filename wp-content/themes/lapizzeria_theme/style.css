@@ -21,7 +21,8 @@ html {
 	width: 100%;
 	margin: 0 auto;
 }
-/* encabezado */
+/*=== ENCABEZADO 
+=================================================================================*/
 .encabezado-sitio {	border-bottom: 1px solid #c1c1c1; }
 .logo { text-align: center; }
 .logo a img { width: 250px; }
@@ -40,9 +41,30 @@ html {
 @media ( min-width: 992px ) {
 	.logo { text-align: center; }
 }
-
-
-
+/*=== MENU DE REDES SOCIALES
+=================================================================================*/
+.sociales ul {
+	text-align: center;
+	list-style: none;
+	padding: 0;
+}
+.sociales ul li {
+	position: relative;
+	display: inline-block;
+}
+.sociales ul li a:before {
+	font-family: "FontAwesome";
+	display: inline-block;
+	vertical-align: top;
+	padding: 0 5px;
+	content: '\f08e';
+	font-size: 30px;
+	color: #000;
+	-webkit-font-smoothing: antialiased;
+}
+@media ( min-width: 768px ) {
+	.sociales ul { float: right; }
+}
 
 
 
