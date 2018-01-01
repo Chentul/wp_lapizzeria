@@ -23,9 +23,22 @@ html {
 }
 /*=== ENCABEZADO 
 =================================================================================*/
-.encabezado-sitio {	border-bottom: 1px solid #c1c1c1; }
+.encabezado-sitio {	
+	border-bottom: 1px solid #c1c1c1; 
+	padding-bottom: 30px;
+}
 .logo { text-align: center; }
 .logo a img { width: 250px; }
+.direccion { 
+	display: block; 
+	clear: both;
+	padding-top: 10px;
+}
+.direccion p {
+	margin: 0;
+	font-size: 14px;
+	text-align: center;
+}
 @media ( min-width: 768px ) {
 	.logo { text-align: left; }
 	.encabezado-sitio .contenedor { position: relative; }
@@ -62,9 +75,36 @@ html {
 	color: #000;
 	-webkit-font-smoothing: antialiased;
 }
+.sociales ul li a[href*="facebook.com"]::before {
+	content: '\f09a';
+}
+.sociales ul li a[href*="twitter.com"]::before {
+	content: '\f099';
+}
+.sociales ul li a[href*="pinterest.com"]::before {
+	content: '\f09a';
+}
+.sociales ul li a[href*="youtube.com"]::before {
+	content: '\f16a';
+}
+.sociales ul li a[href*="instagram.com"]::before {
+	content: '\f16d';
+}
+.sr-text { display: none; }
 @media ( min-width: 768px ) {
 	.sociales ul { float: right; }
 }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
