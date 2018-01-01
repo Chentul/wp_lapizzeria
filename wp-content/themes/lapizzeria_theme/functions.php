@@ -22,7 +22,13 @@ function lapizzeria_styles() {
 	/* === SCRIPTS
 	================================================================*/
 	// el ultimo parametro indica que posicione el archivo en el footer
-	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+	wp_register_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+
+	// incluimos la libreria de jquery a nuestro tema
+	wp_enqueue_script( 'jquery' );
+
+	// incluimos nuestro archivo scripts
+	wp_enqueue_script( 'scripts' );
 
 
 }
