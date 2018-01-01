@@ -46,6 +46,14 @@ function lapizzeria_menus() {
 
 add_action( 'init', 'lapizzeria_menus' );
 
+function lapizzeria_setup() {
+
+	add_theme_support( 'post-thumbnails' );
+}
+
+// hook que se corre una vez que se cargaron los archivos del themes
+add_action( 'after_setup_theme', 'lapizzeria_setup' );
+
 
 
 

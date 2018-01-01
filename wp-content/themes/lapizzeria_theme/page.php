@@ -9,5 +9,5 @@
 		}
 		
 	?>
-	<p class="indice-pagina">page.php</p>
+	<script>console.log('page.php');</script>
 <?php get_footer(); ?>

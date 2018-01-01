@@ -2,6 +2,8 @@ $ = jQuery.noConflict();
 
 $( document ).ready( function() {
 
+	/* === MENU 
+	==============================================*/
 	$( '.mobile-menu a' ).click( function() {
 		$( '.menu-sitio' ).toggle( 'slow' );
 	});
