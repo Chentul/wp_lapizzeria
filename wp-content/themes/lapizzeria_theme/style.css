@@ -27,7 +27,32 @@ html {
 .logo a img { width: 250px; }
 @media ( min-width: 768px ) {
 	.logo { text-align: left; }
+	.encabezado-sitio .contenedor { position: relative; }
+	.informacion-encabezado {
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+	.direccion p {
+		text-align: right;
+	}
 }
 @media ( min-width: 992px ) {
 	.logo { text-align: center; }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
