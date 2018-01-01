@@ -9,5 +9,5 @@
 		}
 		
 	?>
-	<p class="indice-pagina">index.php</p>
+	<p class="indice-pagina">page.php</p>
 <?php get_footer(); ?>
