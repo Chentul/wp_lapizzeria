@@ -3,6 +3,9 @@
 // incluye nuestro archivo style.css de nuestro tema a WordPress
 function lapizzeria_styles() {
 
+	/* === STYLES 
+	================================================================*/
+
 	// función para registrar los estilos
 	wp_register_style( 'normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '7.0' );
 
@@ -15,6 +18,12 @@ function lapizzeria_styles() {
 	wp_enqueue_style( 'normalize' );
 	wp_enqueue_style( 'fontawesome' );
 	wp_enqueue_style( 'style' );
+
+	/* === SCRIPTS
+	================================================================*/
+	// el ultimo parametro indica que posicione el archivo en el footer
+	wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array(), '1.0.0', true );
+
 
 }
 
