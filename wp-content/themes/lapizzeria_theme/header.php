@@ -41,15 +41,23 @@
 			</div><!-- .informacion-encabezado -->
 		</div> <!-- .contenedor -->
 	</header>
-	<div class="contenedor navegacion">
-		<?php 
-			// argumentos necesarios para imprimir nuestro menu de páginas
-			$args = array(
-				'theme_location' => 'header-menu',
-				'container' => 'nav',
-				'container_class' => 'menu-sitio'
-			);
-			// imprime el menu de navegación de nuestro menu
-			wp_nav_menu( $args );
-		?>
-	</div>
+	<div class="menu-principal">
+		<div class="mobile-menu">
+			<a href="#" class="mobile">
+				<i class="fa fa-bars" aria-hidden="true"></i> 
+				Menu
+			</a>
+		</div> <!-- mobile-menu -->
+		<div class="contenedor navegacion">
+			<?php 
+				// argumentos necesarios para imprimir nuestro menu de páginas
+				$args = array(
+					'theme_location' => 'header-menu',
+					'container' => 'nav',
+					'container_class' => 'menu-sitio'
+				);
+				// imprime el menu de navegación de nuestro menu
+				wp_nav_menu( $args );
+			?>
+		</div> <!-- .contenedor navegacion -->
+	</div> <!-- .menu-principal -->

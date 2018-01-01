@@ -96,6 +96,7 @@ html {
 }
 /*=== MENU DE NAVEGACIÓN PRINCIPAL
 =================================================================================*/
+.menu-sitio { display: none; }
 .menu-sitio ul {
 	list-style: none;
 	display: table;
@@ -120,14 +121,30 @@ html {
 .menu-sitio ul .current_page_item a {
 	border-bottom: 8px solid #a61206;
 }
-@media ( min-width: 758px ) {
+@media ( min-width: 768px ) {
+	.menu-sitio { display: block; }
 	.menu-sitio ul li {
 		display: table-cell;
 		width: 1%;
 	}
 }
-
-
+/*=== MENU DE NAVEGACIÓN PRINCIPAL (RESPONSIVO)
+=================================================================================*/
+.mobile-menu a { display: none; }
+@media ( max-width: 768px ) { /* aplica de 0px - 768px */
+	.mobile-menu a {
+		height: 40px;
+		background: #a61206;
+		width: 100%;
+		color: #fff;
+		display: block;
+		text-align: center;
+		line-height: 40px; /* centra el texto de manera horizontal */
+		text-transform: uppercase;
+		font-size: 20px;
+		text-decoration: none;
+	}
+}
 
 
 
