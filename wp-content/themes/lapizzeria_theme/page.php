@@ -2,18 +2,19 @@
 	
 	<?php while( have_posts() ) the_post(); { ?>
 
-		<?php 
-			// agrega la imagen destacada
-			the_post_thumbnail();
-		?>
+		<div class="hero">
+			<div class="contenido-hero">
+				<div class="texto-hero">
+					<h1><?php the_title(); ?></h1>
+				</div>
+			</div> <!-- .contenido-hero -->
+		</div> <!-- .hero -->
 
-		<h1><?php the_title(); ?></h1>
-	
 		<div class="principal contenedor">
-			<main>
+			<main class="texto-centrado contenido-paginas">
 				<?php the_content(); ?>		
-			</main>
-		</div>
+			</main> <!-- contenido-paginas -->
+		</div> <!-- .principal contenedor -->
 
 	<?php } // fin del while ?>
 
