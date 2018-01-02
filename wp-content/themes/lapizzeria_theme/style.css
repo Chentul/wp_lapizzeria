@@ -150,6 +150,21 @@ html {
 }
 /*=== TEMPLATES CONTENIDO 
 =================================================================================*/
+.hero {
+	background: #000;
+	height: 450px;
+	text-align: center;
+	margin: 0 auto;
+	display: table;
+	position: relative;
+}
+.hero .contenido-hero {
+	display: table-cell;
+	vertical-align: middle;
+	color: #fff;
+	position: relative;
+	width: 100vw;
+}
 .principal {
 	padding: 60px;
 	background-color: #fff;
@@ -163,8 +178,16 @@ html {
 	.principal {
 		margin-top: -90px;
 	}
+	.hero .contenido-hero .texto-hero {
+		width: 80%;
+		margin: 0 auto;
+	}
 }
-
+@media ( min-width: 768px ) { 
+	.hero .contenido-hero .texto-hero {
+		width: 60%;
+	}
+}
 
 
 
