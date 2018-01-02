@@ -151,12 +151,23 @@ html {
 /*=== TEMPLATES CONTENIDO 
 =================================================================================*/
 .hero {
-	background: #000;
+	background-repeat: no-repeat !important;
+	background-position: center center !important;
+	background-size: cover !important;
 	height: 450px;
 	text-align: center;
 	margin: 0 auto;
 	display: table;
 	position: relative;
+}
+.hero::after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 100%;
+	background: rgba( 0, 0, 0, 0.6 );
+	top: 0;
+	left: 0;
 }
 .hero .contenido-hero {
 	display: table-cell;
@@ -164,6 +175,7 @@ html {
 	color: #fff;
 	position: relative;
 	width: 100vw;
+	z-index: 2;
 }
 .principal {
 	padding: 60px;

@@ -2,7 +2,7 @@
 	
 	<?php while( have_posts() ) the_post(); { ?>
 
-		<div class="hero">
+		<div class="hero" style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);">
 			<div class="contenido-hero">
 				<div class="texto-hero">
 					<h1><?php the_title(); ?></h1>
