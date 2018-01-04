@@ -23,7 +23,8 @@
 define('DB_NAME', 'wp_lapizzeria');
 
 /** MySQL database username */
-define('DB_USER', 'vicente');
+// define('DB_USER', 'vicente');
+define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'root');
