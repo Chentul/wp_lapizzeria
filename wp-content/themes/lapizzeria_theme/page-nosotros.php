@@ -15,7 +15,16 @@
       <?php the_content(); ?> <!-- imprime el contenido de WP -->
     </main> <!-- .contenido-paginas -->
   </div> <!-- .principal contenedor -->
-  
+
+  <div class="informacion-cajas contenedor">
+    <div class="caja">
+      <img src="<?php the_field( 'imagen_1' )?>" alt="">
+
+      <div class="contenido-caja">
+        <?php the_field( 'descripcion_1' ); ?>
+      </div> <!-- .contenido-caja -->
+    </div> <!-- .caja -->
+  </div> <!-- informacion-cajas -->
 <?php } // fin del while ?>
 
 <script>console.log('page-nosotros.php');</script>
