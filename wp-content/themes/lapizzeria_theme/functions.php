@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 // incluye nuestro archivo style.css de nuestro tema a WordPress
 function lapizzeria_styles() {
 
-	/* === STYLES 
+	/* === STYLES
 	================================================================*/
 
 	// función para registrar los estilos
@@ -51,20 +51,10 @@ add_action( 'init', 'lapizzeria_menus' );
 function lapizzeria_setup() {
 
 	add_theme_support( 'post-thumbnails' );
+	// función para agregar un tamaño personalizado a una imagen
+	// 1er: nombre, 2do: width, 3ero: height, 4to: se redimenciona la imagen
+	add_image_size( 'nosotros', 437, 291, true );
 }
 
 // hook que se corre una vez que se cargaron los archivos del themes
 add_action( 'after_setup_theme', 'lapizzeria_setup' );
-
-
-
-
-
-
-
-
-
-
-
-
-
