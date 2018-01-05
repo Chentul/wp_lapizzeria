@@ -2,10 +2,10 @@
 <html>
 <head>
 	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, user-scalable=false" />
 	<meta description="" />
 	<title>La Pizzeria | <?php the_title(); ?></title>
-	<?php 
+	<?php
 		// Función de WordPress para incluir dependencias
 		wp_head();
 	?>
@@ -20,7 +20,7 @@
 			</div> <!-- .logo -->
 			<div class="informacion-encabezado">
 				<div class="redes-sociales">
-					<?php 
+					<?php
 						// argumentos necesarios para imprimir nuestro menu de redes sociales
 						$args = array(
 							'theme_location' => 'social-menu',
@@ -44,12 +44,12 @@
 	<div class="menu-principal">
 		<div class="mobile-menu">
 			<a href="#" class="mobile">
-				<i class="fa fa-bars" aria-hidden="true"></i> 
+				<i class="fa fa-bars" aria-hidden="true"></i>
 				Menu
 			</a>
 		</div> <!-- mobile-menu -->
 		<div class="contenedor navegacion">
-			<?php 
+			<?php
 				// argumentos necesarios para imprimir nuestro menu de páginas
 				$args = array(
 					'theme_location' => 'header-menu',

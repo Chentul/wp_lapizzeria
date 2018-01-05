@@ -235,3 +235,19 @@ footer p {
 	font-size: 14px;
 }
 footer .copyright { margin-top: 20px; }
+/*=== SOBRE NOSOTROS CAJAS
+=================================================================================*/
+.informacion-cajas { display: grid; }
+.informacion-cajas .caja {
+	display: grid;
+	grid-template-columns: 2fr 3fr;
+}
+.informacion-cajas .caja .imagen-caja { width: 100%; }
+@media ( min-width: 768px ) {
+	.informacion-cajas { grid-template-columns: 1fr 1fr 1fr; }
+	.informacion-cajas .caja {
+		display: grid;
+		grid-template-columns: unset;
+		grid-template-rows: 1fr 1fr;
+	}
+}
