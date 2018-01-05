@@ -15,7 +15,7 @@
       <?php the_content(); ?> <!-- imprime el contenido de WP -->
     </main> <!-- .contenido-paginas -->
   </div> <!-- .principal contenedor -->
-
+  
 <?php } // fin del while ?>
 
 <script>console.log('page-nosotros.php');</script>
