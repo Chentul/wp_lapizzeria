@@ -21,27 +21,41 @@
 
 	<div class="nuestras-especialidades contenedor">
 		<h3 class="">Pizzas</h3>
-		<?php 
-			// argumentos del query
-			$args = array(
-				'post_type' => 'especialidades',
-				'posts_per_page' => -1, // el -1 indica que traiga todas las entradas
-				'orderby' => 'title',
-				'order' => 'ASC',
-				'category_name' => 'pizzas'
-			);
-			$pizzas = new WP_Query( $args );
+		<div class="contenedor-grid">
+			
+		</div>
+			<?php 
 
-			while( $pizzas->have_posts() ) { $pizzas->the_post();
-		?>
-			<ul>
-				<li><?php the_title(); ?></li>
-			</ul>
-		<?php 
-			} // fin del while de $pizzas 
-			// siempre que se utiliza la clase WP_Query tenemos que terminar con wp_reset_postdata()
-			wp_reset_postdata();
-		?>
+				// argumentos del query para la base de datos
+				$args = array(
+					'post_type' => 'especialidades',
+					'posts_per_page' => -1, // el -1 indica que traiga todas las entradas
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'category_name' => 'pizzas'
+				);
+				
+				$pizzas = new WP_Query( $args ); // objeto para realizar la consulta en la base de datos
+
+				//  loop para imprimir el post_type de especialidades
+				while( $pizzas->have_posts() ) { $pizzas->the_post();
+			?>
+				<div class="">
+					<?php the_post_thumbnail( 'especialidades' ); // imprime las imagenes guardadas en cada página ?>
+					<div class="texto-especialidad">
+						<h4>
+							<?php the_title(); // imprime el titulo ?>
+							<span>
+								$ <?php the_field( 'precio' ); // imprime el precio vinculado con el post_field ?>
+							</span>
+						</h4>
+						<?php the_content(); // imprime el contenido de la página ?>
+					</div> <!-- .texto-especialidad -->
+				</div>
+			<?php 
+				} // fin del while de $pizzas 
+				wp_reset_postdata(); // siempre que se utiliza la clase WP_Query tenemos que terminar con wp_reset_postdata()
+			?>
 	</div>
 
 	<script>console.log('nuestras-especialidades.php');</script>

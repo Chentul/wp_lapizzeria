@@ -54,6 +54,8 @@ function lapizzeria_setup() {
 	// función para agregar un tamaño personalizado a una imagen
 	// 1er: nombre, 2do: width, 3ero: height, 4to: se redimenciona la imagen
 	add_image_size( 'nosotros', 437, 291, true );
+
+	add_image_size( 'especialidades', 768, 515, true );
 }
 
 // hook que se corre una vez que se cargaron los archivos del themes
