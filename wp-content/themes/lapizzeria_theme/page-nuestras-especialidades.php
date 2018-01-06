@@ -22,8 +22,6 @@
 	<div class="nuestras-especialidades contenedor">
 		<h3 class="texto-rojo">Pizzas</h3>
 		<div class="contenedor-grid">
-			
-		</div>
 			<?php 
 
 				// argumentos del query para la base de datos
@@ -40,7 +38,7 @@
 				//  loop para imprimir el post_type de especialidades
 				while( $pizzas->have_posts() ) { $pizzas->the_post();
 			?>
-				<div class="">
+				<div class="columnas2-4">
 					<?php the_post_thumbnail( 'especialidades' ); // imprime las imagenes guardadas en cada página ?>
 					<div class="texto-especialidad">
 						<h4>
@@ -56,7 +54,8 @@
 				} // fin del while de $pizzas 
 				wp_reset_postdata(); // siempre que se utiliza la clase WP_Query tenemos que terminar con wp_reset_postdata()
 			?>
+		</div> <!-- .contenedor-grid -->
 	</div>
-
+	
 	<script>console.log('nuestras-especialidades.php');</script>
 <?php get_footer(); ?>
