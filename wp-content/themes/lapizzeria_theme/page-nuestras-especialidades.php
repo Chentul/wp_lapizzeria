@@ -55,7 +55,43 @@
 				wp_reset_postdata(); // siempre que se utiliza la clase WP_Query tenemos que terminar con wp_reset_postdata()
 			?>
 		</div> <!-- .contenedor-grid -->
-	</div>
+
+		<h3 class="texto-rojo">Otros</h3>
+		<div class="contenedor-grid">
+			<?php 
+
+				// argumentos del query para la base de datos
+				$args = array(
+					'post_type' => 'especialidades',
+					'posts_per_page' => -1, // el -1 indica que traiga todas las entradas
+					'orderby' => 'title',
+					'order' => 'ASC',
+					'category_name' => 'otros'
+				);
+				
+				$otros = new WP_Query( $args ); // objeto para realizar la consulta en la base de datos
+
+				//  loop para imprimir el post_type de especialidades
+				while( $otros->have_posts() ) { $otros->the_post();
+			?>
+				<div class="columnas2-4">
+					<?php the_post_thumbnail( 'especialidades' ); // imprime las imagenes guardadas en cada página ?>
+					<div class="texto-especialidad">
+						<h4>
+							<?php the_title(); // imprime el titulo ?>
+							<span>
+								$ <?php the_field( 'precio' ); // imprime el precio vinculado con el post_field ?>
+							</span>
+						</h4>
+						<?php the_content(); // imprime el contenido de la página ?>
+					</div> <!-- .texto-especialidad -->
+				</div>
+			<?php 
+				} // fin del while de $pizzas 
+				wp_reset_postdata(); // siempre que se utiliza la clase WP_Query tenemos que terminar con wp_reset_postdata()
+			?>
+		</div> <!-- .contenedor-grid -->
+	</div> <!-- .nuestras-especialidades -->
 	
 	<script>console.log('nuestras-especialidades.php');</script>
 <?php get_footer(); ?>
