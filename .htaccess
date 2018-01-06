@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /udemy/wp_lapizzeria/
+RewriteBase /udemy/wordpress/wp_lapizzeria/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /udemy/wp_lapizzeria/index.php [L]
+RewriteRule . /udemy/wordpress/wp_lapizzeria/index.php [L]
 </IfModule>
 
 # END WordPress
