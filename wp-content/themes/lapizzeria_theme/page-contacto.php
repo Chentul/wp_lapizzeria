@@ -32,6 +32,8 @@
 					</div>
 					<div class="campo">
 						<input type="submit" name="enviar" class="button" value="Enviar" />
+						<input type="hidden" name="oculto" value="1" /> <!-- valida que la página se recarga -->
+					</div>
 				</form> <!-- reserva-contacto -->
 			</main> <!-- contenido-paginas -->
 		</div> <!-- .principal contenedor -->
