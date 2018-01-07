@@ -132,7 +132,8 @@ img { max-width: 100%; height: auto; }
 .sociales ul li a[href*="instagram.com"]::before {
 	content: '\f16d';
 }
-.sr-text { display: none; }
+.sr-text,
+#searchform .screen-reader-text { display: none; }
 @media ( min-width: 768px ) {
 	.sociales ul { float: right; }
 }
@@ -398,9 +399,37 @@ footer .copyright { margin-top: 20px; }
 	margin-bottom: 0;
 	line-height: 20px;
 }
-
-
-
+/*=== SIDEBAR WIDGETS
+=================================================================================*/
+aside .widget {
+	margin-bottom: 20px;	
+}
+aside .widget h3 {
+ 	font-weight: 700;
+ 	font-size: 24px;
+ 	text-transform: uppercase;
+ }
+#searchform {
+	position: relative;
+}
+#searchform #searchsubmit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 42px;
+	height: 42px;
+	background: #a61206;
+	text-indent: -9999px;
+	background-image: url('assets/img/buscador.png');
+	background-repeat: no-repeat;
+	background-position: center center;
+	border: none;
+	cursor: pointer;
+}
+#searchform input {
+	width: 100%;
+	padding: 10px;
+}
 
 
 
