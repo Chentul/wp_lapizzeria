@@ -54,10 +54,34 @@ function lapizzeria_setup() {
 	add_image_size( 'nosotros', 437, 291, true );
 
 	add_image_size( 'especialidades', 768, 515, true );
+
+	// cambia los ajustes del tamaño de las imagenes en miniatura, tambien se puede cambiar desde ajustes > medios en el dashboard de WP, pero lo recomendable es hacerlo por el functions.php
+	update_option( 'thumbnail_size_w', 253 ); // small width
+	update_option( 'thumbnail_size_h', 164 ); // small height
+
+	// update_option( 'medium_size_w', 253 ); // small width
+	// update_option( 'medium_size_h', 164 ); // small height
+	// update_option( 'large_size_w', 253 ); // small width
+	// update_option( 'large_size_h', 164 ); // small height
 }
 
 // hook que se corre una vez que se cargaron los archivos del themes
 add_action( 'after_setup_theme', 'lapizzeria_setup' );
+
+/* === WIDGETS
+================================================================*/
+function lapizzeria_widgets() {
+
+	register_sidebar( array(
+		'name' => 'Blog Siderbar', // nombre que aparece en el back-end de WP
+		'id' => 'blog_sidebar', // id que utilizaremos para imprimirlo en el sidebar
+		'before_widget' => '<div class="widget">', // etiquetas que encierran el contenido del widget
+		'after_widget' => '</div>',
+		'before_title' => '<h3>', // etiqueta que se posiciona antes de imprimir el nombre del widget
+		'after_title' => '</h3>'
+	) );
+}
+add_action( 'widgets_init', 'lapizzeria_widgets' );
 
 /* === CUSTOM POST TYPE
 ================================================================*/
@@ -103,18 +127,3 @@ function lapizzeria_especialidades() {
 
 	register_post_type( 'especialidades', $args );
 }
-
-/* === WIDGETS
-================================================================*/
-function lapizzeria_widgets() {
-
-	register_sidebar( array(
-		'name' => 'Blog Siderbar', // nombre que aparece en el back-end de WP
-		'id' => 'blog_sidebar', // id que utilizaremos para imprimirlo en el sidebar
-		'before_widget' => '<div class="widget">', // etiquetas que encierran el contenido del widget
-		'after_widget' => '</div>',
-		'before_title' => '<h3>', // etiqueta que se posiciona antes de imprimir el nombre del widget
-		'after_title' => '</h3>'
-	) );
-}
-add_action( 'widgets_init', 'lapizzeria_widgets' );
