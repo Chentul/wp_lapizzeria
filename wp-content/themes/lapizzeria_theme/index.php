@@ -57,6 +57,12 @@
 						</div>
 					</article>
 				<?php } // fin del while ?>
+				<div class="paginacion">
+					<?php
+						// imprime la paginación de las entradas
+						echo paginate_links(); 
+					?>
+				</div>
 			</main> <!-- contenido-paginas -->
 
 			<?php get_sidebar(); // imprime el sidebar ?>

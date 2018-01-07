@@ -444,6 +444,25 @@ footer .copyright { margin-top: 20px; }
 	margin-bottom: 0;
 	line-height: 20px;
 }
+.paginacion {
+	margin-top: 20px;
+	background: #e1e1e1;
+	padding: 20px;
+	display: inline-block;
+}
+.paginacion a {
+	color: #a61206;
+	text-decoration: none;
+	transition: color .5s;
+	-webkit-transition: color .5s;
+	-moz-transition: color .5s;
+	-o-transition: color .5s;
+}
+.paginacion a:hover { color: #f19f30; }
+.paginacion .current {
+	color: #555;
+	font-weight: 700;
+}
 /*=== SIDEBAR WIDGETS
 =================================================================================*/
 .sidebar { margin-top: 5px; }
