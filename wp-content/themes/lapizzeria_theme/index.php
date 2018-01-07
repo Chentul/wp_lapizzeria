@@ -17,48 +17,48 @@
 	</div> <!-- .hero -->
 
 	<div class="principal contenedor">
-		<main class="texto-centrado contenido-paginas">
-			<?php while( have_posts() ) { the_post(); ?>
-				<article class="entrada-blog">
-					<a href="<?php the_permalink(); ?>">
-						<?php
-							// imprime las imagenes de las entradas con el tamaño
-							the_post_thumbnail( 'especialidades' );
-						?>
-					</a>
-					<!-- el header es utilizado para representar la introducción de un contenido -->
-					<header class="informacion-entrada clear">
-						<div class="fecha">
-							<time>
-								<?php echo the_time( 'd' ); // trae el dia del post ?>
-								<span>
-									<?php the_time( 'M' ); // trae el mes del post ?>
-								</span>
-							</time>
-						</div> <!-- .fecha -->
-						<div class="titulo-entrada">
-							<h2><?php the_title(); // imprime el titulo de la entrada ?></h2>
-							<p class="autor">
-								<i class="fa fa-user" aria-hidden="true">
-									<?php the_author(); // imprime el nombre del author que creo la entrada ?>
-								</i>
-							</p>
+		<div class="contenedor-grid">
+			<main class="columnas2-3 contenido-paginas">
+				<?php while( have_posts() ) { the_post(); ?>
+					<article class="entrada-blog">
+						<a href="<?php the_permalink(); ?>">
+							<?php
+								// imprime las imagenes de las entradas con el tamaño
+								the_post_thumbnail( 'especialidades' );
+							?>
+						</a>
+						<!-- el header es utilizado para representar la introducción de un contenido -->
+						<header class="informacion-entrada clear">
+							<div class="fecha">
+								<time>
+									<?php echo the_time( 'd' ); // trae el dia del post ?>
+									<span>
+										<?php the_time( 'M' ); // trae el mes del post ?>
+									</span>
+								</time>
+							</div> <!-- .fecha -->
+							<div class="titulo-entrada">
+								<h2><?php the_title(); // imprime el titulo de la entrada ?></h2>
+								<p class="autor">
+									<i class="fa fa-user" aria-hidden="true"></i> <?php the_author(); // imprime el nombre del author que creo la entrada ?>
+								</p>
+							</div>
+							<?php 
+								// the_category(); // imprime las categorias de la entrada
+								// the_tags(); // imprime las etiquetas de las entradas
+							?>
+						</header> <!-- .header -->
+						<div class="contenido-entrada">
+							<?php 
+								//the_content(); // imprime todo el contenido de la entrada/post
+								the_excerpt(); // imprime una pequeña cantidad de la entrada/post
+							?>
+							<a href="<?php the_permalink(); // genera la url de la entrada/post ?>" class="button rojo">Leer más</a>
 						</div>
-						<?php 
-							// the_category(); // imprime las categorias de la entrada
-							// the_tags(); // imprime las etiquetas de las entradas
-						?>
-					</header> <!-- .header -->
-					<div class="contenido-entrada">
-						<?php 
-							//the_content(); // imprime todo el contenido de la entrada/post
-							the_excerpt(); // imprime una pequeña cantidad de la entrada/post
-						?>
-						<a href="<?php the_permalink(); // genera la url de la entrada/post ?>" class="button rojo">Leer más</a>
-					</div>
-				</article>
-			<?php } // fin del while ?>
-		</main> <!-- contenido-paginas -->
+					</article>
+				<?php } // fin del while ?>
+			</main> <!-- contenido-paginas -->
+		</div> <!-- .contenedor-grid -->
 	</div> <!-- .principal contenedor -->
 
 
