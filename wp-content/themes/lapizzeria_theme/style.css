@@ -596,12 +596,16 @@ footer .copyright { margin-top: 20px; }
 @media ( min-width: 768px ) {
 	#gallery-1 .gallery-item { width: 25% !important; }		
 }
-/*=== GALERIA
+/*=== CONTACTO
 =================================================================================*/
 .contacto {
 	background-image: url( 'assets/img/contacto_bg.jpg' );
 	background-repeat: no-repeat;
 	background-position: top left;
+}
+.reserva-contacto h2 {
+	font-size: 20px;
+	font-weight: 700;
 }
 .reserva-contacto .campo {
 	margin-bottom: 20px;
@@ -610,17 +614,25 @@ footer .copyright { margin-top: 20px; }
 .reserva-contacto .campo input,
 .reserva-contacto .campo textarea {
 	width: 100%;
-	border: 3px solid #000;
+	border: 2px solid #000;
 	padding: 15px 10px;
 	font-family: "Open Sans", sans-serif;
 }
+.reserva-contacto ::-webkit-input-placeholder { color: #000 !important; }
+/* .reserva-contacto :moz-input-placeholder { color: #000 !important; }
+.reserva-contacto ::moz-input-placeholder { color: #000 !important; } */
+.reserva-contacto ::-moz-placeholder { color: #000 !important; }
+.reserva-contacto ::-ms-input-placeholder { color: #000 !important; }
+.reserva-contacto .campo .button { border: none; }
 .reserva-contacto .campo input:focus,
 .reserva-contacto .campo textarea:focus { outline: none; }
 .reserva-contacto .campo textarea {
 	height: 200px;
 	resize: none;
 }
-
+@media ( min-width: 768px ) {
+	.reserva-contacto { margin-left: 50%; }
+}
 
 
 
