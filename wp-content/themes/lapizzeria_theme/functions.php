@@ -4,6 +4,7 @@
 ================================================================*/
 require dirname( __FILE__ ) . '/inc/database.php'; // funciones para crear la db
 require dirname( __FILE__ ) . '/inc/reservaciones.php'; // funciones para insertar datos en la db
+require dirname( __FILE__ ) . '/inc/opciones.php'; // crea las opciones para el template
 
 // incluye nuestro archivo style.css de nuestro tema a WordPress
 function lapizzeria_styles() {
