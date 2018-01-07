@@ -105,3 +105,18 @@ function lapizzeria_especialidades() {
 
 	register_post_type( 'especialidades', $args );
 }
+
+/* === WIDGETS
+================================================================*/
+function lapizzeria_widgets() {
+
+	register_sidebar( array(
+		'name' => 'Blog Siderbar', // nombre que aparece en el back-end de WP
+		'id' => 'blog_sidebar', // id que utilizaremos para imprimirlo en el sidebar
+		'before_widget' => '<div class="widget">', // etiquetas que encierran el contenido del widget
+		'after_widget' => '</div>',
+		'before_title' => '<h3>', // etiqueta que se posiciona antes de imprimir el nombre del widget
+		'after_title' => '</h3>'
+	) );
+}
+add_action( 'widgets_init', 'lapizzeria_widgets' );
