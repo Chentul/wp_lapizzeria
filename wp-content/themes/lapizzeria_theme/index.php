@@ -58,6 +58,8 @@
 					</article>
 				<?php } // fin del while ?>
 			</main> <!-- contenido-paginas -->
+
+			<?php get_sidebar(); // imprime el sidebar ?>
 		</div> <!-- .contenedor-grid -->
 	</div> <!-- .principal contenedor -->
 
