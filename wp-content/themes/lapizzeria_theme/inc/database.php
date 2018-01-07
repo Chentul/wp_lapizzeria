@@ -1,6 +1,7 @@
 <?php 
  
- // esta función solo se corre una sola vez
+/* === FUNCIÓN PARA CREAR LA BASE DE DATOS PARA EL CONTROL DE RESERVACIONES DEL CONTACTO
+==========================================================================================*/
 function lapizzeria_database() {
 
 	global $wpdb; // incluye la clase con muchos métodos
@@ -30,8 +31,8 @@ function lapizzeria_database() {
 	// guarda la version de la base de datos para realizar comparaciones
 	add_option( 'lapizzeria_dbversion', $lapizeria_dbversion ); 
 
-	/*=== EN CASO DE HABER ACTUALIZACIÓNES
-	========================================================================================================*/
+	/* === EN CASO DE HABER ACTUALIZACIÓNES
+	================================================================*/
 	if( lapizzeriadb_revisar() ) {
 
 		$tabla = $wpdb->prefix . 'reservaciones';
