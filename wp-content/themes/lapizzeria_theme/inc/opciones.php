@@ -17,6 +17,34 @@ function lapizzeria_opciones() {
 
 }
 
-lapizzeria_reservaciones() {
+function lapizzeria_reservaciones() {
+?>
+	<div class="wrap">
+		<h1>Reservaciones</h1>
+		<table class="wp-list-table widefat striped">
+			<thead>
+				<tr>
+					<th class="manage-column">ID</th>
+					<th class="manage-column">Nombre</th>
+					<th class="manage-column">Fecha</th>
+					<th class="manage-column">Correo</th>
+					<th class="manage-column">Telefono</th>
+					<th class="manage-column">Mensaje</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<?php 
+						global $wpdb;
+						
+						$reservaciones = $wpdb->prefix . 'reservaciones'; // obtenemos la table
+						// realizamos la consulta
+						$registros = $wpdb->get_results( "SELECT * FROM $reservaciones;" );
 
-}
+					?>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+<?php
+} // fin de la funcion
