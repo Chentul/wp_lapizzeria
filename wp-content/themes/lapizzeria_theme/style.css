@@ -463,6 +463,11 @@ footer .copyright { margin-top: 20px; }
 	color: #555;
 	font-weight: 700;
 }
+.paginacion .anteriores,
+.paginacion .siguientes {
+	float: left;
+}
+.paginacion .anteriores { margin-right: 20px; }
 /*=== SIDEBAR WIDGETS
 =================================================================================*/
 .sidebar { margin-top: 5px; }

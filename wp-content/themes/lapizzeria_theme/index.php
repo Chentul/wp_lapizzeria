@@ -59,9 +59,15 @@
 				<?php } // fin del while ?>
 				<div class="paginacion">
 					<?php
-						// imprime la paginación de las entradas
-						echo paginate_links(); 
+						// imprime la paginación de las entradas ( Método 1 )
+						// echo paginate_links();
 					?>
+					<div class="anteriores">
+						<?php next_posts_link( 'Anterior' ); ?>
+					</div>
+					<div class="siguientes">
+						<?php previous_posts_link( 'Siguiente' ); ?>
+					</div>
 				</div>
 			</main> <!-- contenido-paginas -->
 
