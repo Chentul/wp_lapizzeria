@@ -582,5 +582,14 @@ footer .copyright { margin-top: 20px; }
 		width: 100%;
 	}
 }
-
-
+/*=== GALERIA
+=================================================================================*/
+#gallery-1 .gallery-item { 
+	width: 50% !important; 
+	margin: 0px !important;
+}
+#gallery-1 .gallery-item img { border: none; }
+#gallery-1 .gallery-item .gallery-icon { padding: 5px; }
+@media ( min-width: 768px ) {
+	#gallery-1 .gallery-item { width: 25% !important; }		
+}
