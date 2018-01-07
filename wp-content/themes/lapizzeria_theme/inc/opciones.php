@@ -33,16 +33,28 @@ function lapizzeria_reservaciones() {
 				</tr>
 			</thead>
 			<tbody>
-				<tr>
-					<?php 
-						global $wpdb;
-						
-						$reservaciones = $wpdb->prefix . 'reservaciones'; // obtenemos la table
-						// realizamos la consulta
-						$registros = $wpdb->get_results( "SELECT * FROM $reservaciones;" );
+				<?php 
+					global $wpdb;
+					
+					$reservaciones = $wpdb->prefix . 'reservaciones'; // obtenemos la table
+					
+					// regresa los registros como un array númerico 
+					// $registros = $wpdb->get_results( "SELECT * FROM $reservaciones;", ARRAY_N );
+					// regresa los registros como array asociativo
+					$registros = $wpdb->get_results( "SELECT * FROM $reservaciones;", ARRAY_A );
+					
+					foreach( $registros as $registro ) {
 
-					?>
-				</tr>
+				?>
+					<tr>
+						<td><?php echo $registro[ 'id' ]; ?></td>
+						<td><?php echo $registro[ 'nombre' ]; ?></td>
+						<td><?php echo $registro[ 'fecha' ]; ?></td>
+						<td><?php echo $registro[ 'correo' ]; ?></td>
+						<td><?php echo $registro[ 'telefono' ]; ?></td>
+						<td><?php echo $registro[ 'mensaje' ]; ?></td>
+					</tr>
+				<?php } // fin del foreach ?>
 			</tbody>
 		</table>
 	</div>
