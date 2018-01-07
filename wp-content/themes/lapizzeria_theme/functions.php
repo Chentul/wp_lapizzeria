@@ -36,7 +36,7 @@ function lapizzeria_styles() {
 
 }
 
-add_action( 'wp_enqueue_scripts', 'lapizzeria_styles' );
+add_action( 'wp_enqueue_scripts', 'lapizzeria_styles' ); // hook para agregar css y js
 
 // función para implementar los menus en nuestro tema de WordPress
 function lapizzeria_menus() {
@@ -68,8 +68,7 @@ function lapizzeria_setup() {
 	// update_option( 'large_size_h', 164 ); // small height
 }
 
-// hook que se corre una vez que se cargaron los archivos del themes
-add_action( 'after_setup_theme', 'lapizzeria_setup' );
+add_action( 'after_setup_theme', 'lapizzeria_setup' ); // hook que se corre una sola vez
 
 /* === WIDGETS
 ================================================================*/
@@ -84,11 +83,11 @@ function lapizzeria_widgets() {
 		'after_title' => '</h3>'
 	) );
 }
-add_action( 'widgets_init', 'lapizzeria_widgets' );
+
+add_action( 'widgets_init', 'lapizzeria_widgets' ); // hook para agregar widgets
 
 /* === CUSTOM POST TYPE
 ================================================================*/
-add_action( 'init', 'lapizzeria_especialidades' );
 function lapizzeria_especialidades() {
 	// interfaz
 	$labels = array(
@@ -130,3 +129,5 @@ function lapizzeria_especialidades() {
 
 	register_post_type( 'especialidades', $args );
 }
+
+add_action( 'init', 'lapizzeria_especialidades' ); // hook que se corre al inicializar WP
