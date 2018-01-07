@@ -11,7 +11,7 @@
 		</div> <!-- .hero -->
 
 		<div class="principal contacto contenedor">
-			<main class="texto-centrado contenido-paginas">
+			<main class="contenido-paginas">
 				<?php //the_content(); ?> <!-- imprime el contenido de WP -->
 				<h2>Realiza una reservación</h2>
 				<form class="reserva-contacto" method="POST">
