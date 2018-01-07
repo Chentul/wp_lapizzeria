@@ -23,6 +23,7 @@
 			?>
 		</div> <!-- .comentarios -->
 		<div class="contenedor">
+			<h3 class="texto-centrado">Comentarios</h3>
 			<ul class="lista-comentarios">
 				<?php 
 					// variable que obtiene todos los comentarios

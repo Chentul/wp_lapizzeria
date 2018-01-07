@@ -515,6 +515,36 @@ footer .copyright { margin-top: 20px; }
 }
 .comentarios .logged-in-as a:first-child { padding-left: 0px; }
 .comentarios .logged-in-as a:hover { color: #f19f30; }
+.lista-comentarios, 
+.lista-comentarios ul { list-style: none; }
+.lista-comentarios .comment {
+	background: #e1e1e1;
+	padding: 20px;
+	margin-bottom: 20px;
+}
+.lista-comentarios .comment cite {
+	color: #a61206;
+	font-size: 20px;
+	font-weight: 700;
+}
+.lista-comentarios .comment .comment-author { margin-bottom: 20px; }
+.lista-comentarios .comment a {
+	text-decoration: none;
+	color: #a61206;
+	transition: color .5s;
+	-webkit-transition: color .5s;
+	-moz-transition: color .5s;
+	-o-transition: color .5s;
+}
+.lista-comentarios .comment a:hover { color: #f19f30; }
+.lista-comentarios .comment .children li {
+	background: #fff;
+	margin-top: 20px;
+}
+.lista-comentarios .comment .children li .children li {
+	background: #e1e1e1;
+	margin-top: 20px;
+}
 @media ( min-width: 992px ) {
 	.comentarios { width: 60%; }
 	.comentarios form label {
