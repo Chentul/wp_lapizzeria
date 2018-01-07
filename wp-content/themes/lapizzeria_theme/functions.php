@@ -1,7 +1,7 @@
 <?php
 
 // incluye nuestras funciones para la base de datos
-require get_template_directory_uri . 'inc/database.php';
+require dirname( __FILE__ ) . '/inc/database.php';
 
 // incluye nuestro archivo style.css de nuestro tema a WordPress
 function lapizzeria_styles() {
