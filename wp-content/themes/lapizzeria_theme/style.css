@@ -296,7 +296,12 @@ footer ul li a {
 	font-weight: bold;
 	font-size: 16px;
 	text-decoration: none;
+	transition: color .5s;
+	-webkit-transition: color .5s;
+	-moz-transition: color .5s;
+	-o-transition: color .5s;
 }
+footer ul li a:hover { color: #6f6f6f; }
 footer ul li:last-child .separador { display: none; }
 footer .ubicacion { margin-top: 30px; }
 footer p {
