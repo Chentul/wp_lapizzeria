@@ -652,6 +652,7 @@ footer .copyright { margin-top: 20px; }
 	overflow: hidden;
 	display: table;
 }
+
 .contenido-especialidad .informacion-platillo {
 	position: absolute;
 	top: 100%;
@@ -678,6 +679,7 @@ footer .copyright { margin-top: 20px; }
 	top: 0;
 	opacity: 1;
 }
+
 .ingredientes {
 	background: url( 'assets/img/bg-ingredientes.jpg' );
 	margin-top: 50px;
@@ -699,10 +701,45 @@ footer .copyright { margin-top: 20px; }
 	margin: 0 auto;
 }
 .ingredientes .imagen img { width: 80%; }
+
+.ubicacion-reservacion {
+	background-image: url( 'assets/img/bg-ingredientes.jpg' );
+	margin-top: 50px;
+}
+.home .reserva-contacto {
+	margin: 0px;
+	padding: 50px;
+}
+.home .reserva-contacto h2 {
+	color: #fff;
+	font-size: 34px;
+	text-align: center;
+	font-weight: 700;
+}
+.home .reserva-contacto input,
+.home .reserva-contacto textarea {
+	background: transparent;
+	border: 2px solid #fff;
+}
+.home .reserva-contacto ::-webkit-input-placeholder { color: #fff !important; }
+.home .reserva-contacto ::-moz-placeholder { color: #fff !important; }
+.home .reserva-contacto :moz-placeholder { color: #fff !important; }
+.home .reserva-contacto ::-ms-input-placeholder { color: #fff !important; }
+.home .reserva-contacto input[type="datetime-local"] {
+	color: #fff !important;
+}
+.home .reserva-contacto input[type="submit"] {
+	border: none;
+	width: auto;
+	background: #a61206;
+	display: block;
+	width: 100%;
+}
+.home .reserva-contacto input[type="submit"]:hover {
+	background: #f19f30;
+}
 @media ( min-width: 768px ) {
-	.home .texto-hero {
-		max-width: 680px;
-	}
+	.home .texto-hero { max-width: 680px; }
 }
 @media ( max-width: 767px ) {
 	.contenido-especialidad {

@@ -99,7 +99,7 @@
 				?>
 			</div>
 		</div>
-	</section>
+	</section> <!-- .ubicacion-reservacion -->
 
 	<script>console.log('front-page.php');</script>
 <?php get_footer(); ?>
