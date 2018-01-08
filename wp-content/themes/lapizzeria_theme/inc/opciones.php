@@ -14,7 +14,25 @@ function lapizzeria_ajustes() {
 }
 
 function lapizzeria_opciones() {
-
+?>
+	<div class="wrap">
+		<h1>Ajustes La Pizzeria</h1>
+		<!-- el action siempre debe ser options.php, el cual se encuentra en wp-admin>options.php, el cual ya trae muchas funcionalidades para los forms -->
+		<form action="options.php" method="POST">
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">Dirección</th>
+					<td><input type="text" name="lapizzeria_direccion" value=""/></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Teléfono</th>
+					<td><input type="text" name="lapizzeria_telefono" value=""/></td>
+				</tr>
+			</table>
+			<?php submit_button(); ?>
+		</form>
+	</div>
+<?php
 }
 
 function lapizzeria_reservaciones() {
@@ -42,7 +60,7 @@ function lapizzeria_reservaciones() {
 					// $registros = $wpdb->get_results( "SELECT * FROM $reservaciones;", ARRAY_N );
 					// regresa los registros como array asociativo
 					$registros = $wpdb->get_results( "SELECT * FROM $reservaciones;", ARRAY_A );
-					
+
 					foreach( $registros as $registro ) {
 
 				?>
