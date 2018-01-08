@@ -61,6 +61,8 @@ function lapizzeria_setup() {
 
 	add_image_size( 'especialidades', 768, 515, true );
 
+	add_image_size( 'especialidades_portrait', 435, 526, true );
+
 	// cambia los ajustes del tamaño de las imagenes en miniatura, tambien se puede cambiar desde ajustes > medios en el dashboard de WP, pero lo recomendable es hacerlo por el functions.php
 	update_option( 'thumbnail_size_w', 253 ); // small width
 	update_option( 'thumbnail_size_h', 164 ); // small height
