@@ -77,7 +77,17 @@
 				<?php } // fin del while ?>
 			</div>
 		</div>
-	</section>
+	</section>  <!-- .ingredientes -->
+
+	<section class="contenedor">
+		<h2 class="color-rojo texto-centrado">Galeria de Imágenes</h2>
+		<?php 
+			$url = get_page_by_title( 'Galeria' );
+			echo get_post_gallery( $url->ID ); // imprime la galeria del post
+		?>
+	</section> <!-- .galeria -->
+
+	
 
 	<script>console.log('front-page.php');</script>
 <?php get_footer(); ?>
