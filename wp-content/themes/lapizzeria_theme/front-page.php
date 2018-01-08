@@ -71,7 +71,7 @@
 						?>
 						<a class="button" href="<?php echo get_permalink( $url->ID ); ?>">Leer más</a>
 					</div>
-					<div class="columnas2-4">
+					<div class="columnas2-4 imagen">
 						<img src="<?php the_field( 'imagen' ); ?>" />
 					</div>
 				<?php } // fin del while ?>
