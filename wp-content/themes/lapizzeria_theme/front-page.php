@@ -5,14 +5,24 @@
 		<div class="hero" style="background: url(<?php echo get_the_post_thumbnail_url(); ?>);">
 			<div class="contenido-hero">
 				<div class="texto-hero">
-					<h1><?php the_title(); ?></h1> <!-- imprime el titutlo de la página de WP -->
+					<h1>
+						<?php 
+							// imprime la descripción de WP
+							echo esc_html( get_option( 'blogdescription' ) );
+							// esc_html( bloginfo( 'description' ) );
+						?>
+					</h1>
+					<?php 
+						the_content(); // imprime el contenido de la página 
+						$url = get_page_by_title( 'Sobre Nosotros' );
+					?>
+					<a href="<?php echo get_permalink( $url->ID ); ?>" class="button">Leer más</a>
 				</div>
 			</div> <!-- .contenido-hero -->
 		</div> <!-- .hero -->
 
 		<div class="principal contenedor">
 			<main class="texto-centrado contenido-paginas">
-				<?php the_content(); ?> <!-- imprime el contenido de WP -->
 			</main> <!-- contenido-paginas -->
 		</div> <!-- .principal contenedor -->
 
@@ -20,3 +30,4 @@
 
 	<script>console.log('front-page.php');</script>
 <?php get_footer(); ?>
+g

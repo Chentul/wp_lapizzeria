@@ -10,7 +10,7 @@
 		wp_head();
 	?>
 </head>
-<body>
+<body <?php body_class(); // imprime clases de cada pagina para pdoer darle mejores estilos ?>>
 	<header class="encabezado-sitio">
 		<div class="contenedor">
 			<div class="logo">
