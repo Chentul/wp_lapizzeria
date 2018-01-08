@@ -16,7 +16,7 @@
 						the_content(); // imprime el contenido de la página 
 						$url = get_page_by_title( 'Sobre Nosotros' );
 					?>
-					<a href="<?php echo get_permalink( $url->ID ); ?>" class="button">Leer más</a>
+					<a href="<?php echo get_permalink( $url->ID ); ?>" class="button naranja">Leer más</a>
 				</div>
 			</div> <!-- .contenido-hero -->
 		</div> <!-- .hero -->
