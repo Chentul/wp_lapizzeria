@@ -11,6 +11,18 @@ function lapizzeria_ajustes() {
 	// 1ero: el slug, 2do: nombre de la pagina, 3ero: titulo del menu, 4to: capability que es el administrador, 5to: slug, 6to: funcion callback
 	add_submenu_page( 'lapizzeria_ajustes', 'Reservaciones', 'Reservaciones', 'administrator', 'lapizzeria_reservaciones', 'lapizzeria_reservaciones' ); // agrega los submenus del menu principal
 
+	// llamar al registro de las opciones de nuestro theme
+	add_action( 'admin_init', 'lapizzeria_registrar_opciones' );
+}
+
+function lapizzeria_registrar_opciones() {
+
+	// registrar opciones una por campo
+	// 1era: grupo, 2do: el name del form
+	register_setting( 'lapizzeria_opciones_grupo', 'lapizzeria_direccion' );
+	register_setting( 'lapizzeria_opciones_grupo', 'lapizzeria_telefono' );
+
+
 }
 
 function lapizzeria_opciones() {
@@ -19,6 +31,11 @@ function lapizzeria_opciones() {
 		<h1>Ajustes La Pizzeria</h1>
 		<!-- el action siempre debe ser options.php, el cual se encuentra en wp-admin>options.php, el cual ya trae muchas funcionalidades para los forms -->
 		<form action="options.php" method="POST">
+			<?php
+				// le indica a WP que utilice estas opciones
+				settings_fields( 'lapizzeria_opciones_grupo' );
+				do_settings_sections( 'lapizzeria_opciones_grupo' );
+			?>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Dirección</th>
@@ -29,7 +46,7 @@ function lapizzeria_opciones() {
 					<td><input type="text" name="lapizzeria_telefono" value=""/></td>
 				</tr>
 			</table>
-			<?php submit_button(); ?>
+			<?php submit_button(); // boton de guardar ?>
 		</form>
 	</div>
 <?php
