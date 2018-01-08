@@ -57,6 +57,27 @@
 		</main> <!-- contenido-paginas -->
 	</div> <!-- .principal contenedor -->
 
+	<section class="ingredientes">
+		<div class="contenedor">
+			<div class="contenedor-grid">
+				<?php 
+					while( have_posts() ) {
+						the_post();
+				?>
+					<div class="columnas2-4">
+						<?php 
+							the_field( 'contenido' ); 
+							$url = get_page_by_title( 'Sobre Nosotros' );
+						?>
+						<a class="button" href="<?php echo get_permalink( $url->ID ); ?>">Leer más</a>
+					</div>
+					<div class="columnas2-4">
+						<img src="<?php the_field( 'imagen' ); ?>" />
+					</div>
+				<?php } // fin del while ?>
+			</div>
+		</div>
+	</section>
 
 	<script>console.log('front-page.php');</script>
 <?php get_footer(); ?>
