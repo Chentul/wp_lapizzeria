@@ -645,13 +645,60 @@ footer .copyright { margin-top: 20px; }
 .home .texto-hero p {
 	line-height: 40px;
 	font-size: 18px;
-}.home .texto-hero h1 { margin-top: 0px; }
+}
+.home .texto-hero h1 { margin-top: 0px; }
+.contenido-especialidad {
+	position: relative;
+	overflow: hidden;
+	display: table;
+}
+.contenido-especialidad .informacion-platillo {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba( 241, 159, 48, 0.7 );
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	color: #fff;
+	padding: 5px;
+	transition: top .5s ease-in-out;
+	opacity: 0;
+}
+.contenido-especialidad .informacion-platillo .precio { font-size: 60px; font-weight: 700; }
+.contenido-especialidad .informacion-platillo h3 { 
+	font-size: 40px;
+	margin-top: 20px;
+	font-weight: 400;
+}
+.contenido-especialidad .informacion-platillo p { margin: 0 0 10px 0; }
+.contenido-especialidad:hover .informacion-platillo {
+	top: 0;
+	opacity: 1;
+}
 @media ( min-width: 768px ) {
 	.home .texto-hero {
 		max-width: 680px;
 	}
 }
-	
+@media ( max-width: 767px ) {
+	.contenido-especialidad {
+		overflow: visible;
+		display: block;
+		margin-bottom: 30px;
+	}
+	.contenido-especialidad img {
+		width: 100%;
+	}
+	.contenido-especialidad .informacion-platillo {
+		position: relative;
+		opacity: 1;
+		background: #f19f30;
+		padding: 30px 0px;
+	}
+}
 
 
 

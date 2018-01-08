@@ -24,7 +24,7 @@
 
 	<div class="principal contenedor">
 		<main class="contenedor-grid">
-			<h2 class="color-rojo">Nuestras Especialidades</h2>
+			<h2 class="texto-centrado color-rojo">Nuestras Especialidades</h2>
 			<?php 
 				// imprimimos contenido de otras secciones
 				$args = array(
