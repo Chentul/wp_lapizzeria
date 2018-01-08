@@ -87,7 +87,19 @@
 		?>
 	</section> <!-- .galeria -->
 
-	
+	<section class="ubicacion-reservacion">
+		<div class="contenedor-grid">
+			<div class="columnas2-4">
+				mapa
+			</div>
+			<div class="columnas2-4">
+				<?php
+					// trae el formulario de reservacion
+					get_template_part( 'templates/formulario', 'reservacion' );
+				?>
+			</div>
+		</div>
+	</section>
 
 	<script>console.log('front-page.php');</script>
 <?php get_footer(); ?>
